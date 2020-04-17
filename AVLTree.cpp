@@ -20,7 +20,7 @@ dictionary::dictionary( dictionary &other) {
     __size = other.__size;
 }
 
-void dictionary::copy(Node *pNode, Node *__copy) {
+void dictionary::copy(Node *&pNode, Node *__copy) {
     if (!__copy) {
         return;
     }
@@ -37,6 +37,7 @@ dictionary &dictionary::operator=(const dictionary &other) {
     root = nullptr;
     __size = other.__size;
     copy(root, other.root);
+    return *this;
 }
 
 dictionary &dictionary::operator=(dictionary &&other) noexcept {

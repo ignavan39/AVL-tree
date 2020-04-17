@@ -48,7 +48,7 @@ private:
     Node* root{};
     int __size{};
     void deleteTree(Node* pNode);
-    void copy(Node *pNode, Node *pNode1);
+    void copy(Node *&pNode, Node *pNode1);
     int find(const std::string& findWord , Node * pNode);
     bool insert(const std::string&, Node*& pNode);
 
